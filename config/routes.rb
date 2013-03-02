@@ -1,6 +1,7 @@
 Railsgirls::Application.routes.draw do
   root :to => redirect('/ideas')
   resources :ideas
+  mount PostgresqlLoStreamer::Engine => "/idea_picture"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
